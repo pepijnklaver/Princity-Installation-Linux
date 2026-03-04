@@ -8,7 +8,7 @@ apt update && apt install -y wget unzip openjdk-17-jre-headless
 echo "Downloading Princity Agent..."
 mkdir -p /opt/princity-agent
 cd /opt/princity-agent
-wget https://princity.cloud/download/princity-agent.zip -O agent.zip
+wget https://vwc.its-printer.com/downloads/agent.zip
 unzip -o agent.zip
 
 # 3. Create the remotePanel config (CRITICAL for Remote Panel support)
