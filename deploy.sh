@@ -13,7 +13,7 @@ unzip -o agent.zip
 
 # 3. Create the remotePanel config (CRITICAL for Remote Panel support)
 echo "Enabling Remote Panel flag..."
-echo "remotePanel=true" > /opt/princity-agent/agent.config
+echo "remotePanel=true" > /opt/princity-agent/config/agent.config
 
 # 4. Run the interactive installer
 echo "------------------------------------------------"
