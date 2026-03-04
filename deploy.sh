@@ -16,12 +16,12 @@ echo "Enabling Remote Panel flag..."
 echo "remotePanel=true" > /opt/princity-agent/agent.config
 
 # 4. Run the interactive installer
-# This will pause and ask you to paste your Agent Key
 echo "------------------------------------------------"
 echo "Starting Princity Installer..."
-echo "Please paste your Agent Key when prompted below:"
+echo "IMPORTANT: Key must be in format XXXX-XXXX-XXXX-XXXX"
 echo "------------------------------------------------"
-sh ./install_linux.sh
+
+sh ./install_linux.sh </dev/tty
 
 # 5. Start the service using the official binary
 echo "Starting Princity-Agent service..."
