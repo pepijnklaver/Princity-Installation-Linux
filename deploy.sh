@@ -25,8 +25,8 @@ sh ./install_linux.sh </dev/tty
 
 # 5. Start the service using the official binary
 echo "Starting Princity-Agent service..."
-chmod +x ./Princity-Agent
-./Princity-Agent start
+chmod +x ./princity-agent
+./princity-agent start
 
 echo "------------------------------------------------"
 echo "Setup complete. Check your Princity Dashboard!"
