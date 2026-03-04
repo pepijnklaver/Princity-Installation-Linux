@@ -7,7 +7,7 @@ This repository provides a streamlined bash script to deploy the **Princity Agen
 To deploy the agent in a single command, open your terminal and run:
 
 ```bash
-apt update && apt install -y wget && bash <(wget -qO- [https://raw.githubusercontent.com/pepijnklaver/Princity-Installation-Linux/refs/heads/main/deploy.sh](https://raw.githubusercontent.com/pepijnklaver/Princity-Installation-Linux/refs/heads/main/deploy.sh))
+apt update && apt install -y wget && bash <(wget -qO- https://raw.githubusercontent.com/pepijnklaver/Princity-Installation-Linux/refs/heads/main/deploy.sh)
 
 ```
 
