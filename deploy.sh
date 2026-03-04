@@ -1,7 +1,6 @@
-cat << 'EOF' > deploy_princity.sh
 #!/bin/bash
 
-# 1. Update and Install Java
+# 1. Update and Install Java (The only dependency needed)
 echo "Installing Java..."
 apt update && apt install -y wget unzip openjdk-17-jre-headless
 
@@ -12,24 +11,23 @@ cd /opt/princity-agent
 wget https://princity.cloud/download/princity-agent.zip -O agent.zip
 unzip -o agent.zip
 
-# 3. Create the remotePanel config
+# 3. Create the remotePanel config (CRITICAL for Remote Panel support)
 echo "Enabling Remote Panel flag..."
 echo "remotePanel=true" > /opt/princity-agent/agent.config
 
-# 4. Run the interactive installer to handle the Agent Key
+# 4. Run the interactive installer
+# This will pause and ask you to paste your Agent Key
+echo "------------------------------------------------"
 echo "Starting Princity Installer..."
-echo "Please enter your Agent Key when prompted below:"
+echo "Please paste your Agent Key when prompted below:"
+echo "------------------------------------------------"
 sh ./install_linux.sh
 
-# 5. Start the service
+# 5. Start the service using the official binary
 echo "Starting Princity-Agent service..."
 chmod +x ./Princity-Agent
 ./Princity-Agent start
 
 echo "------------------------------------------------"
-echo "Setup complete. Verify the agent is online in your dashboard."
+echo "Setup complete. Check your Princity Dashboard!"
 echo "------------------------------------------------"
-EOF
-
-chmod +x deploy_princity.sh
-./deploy_princity.sh
